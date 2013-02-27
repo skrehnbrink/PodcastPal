@@ -1,0 +1,48 @@
+
+Podcast Pal is a free and open source mobile web application for podcast management built with Sencha Touch 2.0 and PhoneGap 1.5.
+
+Features: 
+	- view podcast feeds
+	- download podcasts to device
+	- play downloaded podcasts
+
+Notes:	
+	- Podcast Pal is currently only available for Android and has only been tested with Kindle Fire 1st Generation (Android 2.3.3, API 10) 
+
+
+
+Podcast Pal Developer Environment Setup (Kindle Fire):
+
+1.  Install Java JDK, set JAVA_HOME, add JAVA_HOME/lib to PATH
+2.  Install Ant, add ANT_HOME/lib to PATH
+3.  Install Android SDK: http://developer.android.com/sdk/index.html
+4.  Configure Environment for Kindle Fire: https://developer.amazon.com/sdk/fire/connect-adb.html
+
+5.  Install Apache (required for JavaScript debugging)
+		- Add a vhost <APACHE_HOME>/conf/extra/httpd-vhosts.conf (or alternatively an alias in httpd.conf)
+		- Add vhost ServerName to C:\Windows\System32\drivers\etc\hosts
+	  	  Example vhost:
+	  	  	<VirtualHost *:80>
+			    ServerName podcastpal.local
+			    DocumentRoot "<ECLIPSE_WORKSPACE>\Podcast Downloader\assets\www"
+			 
+			    SetEnv APPLICATION_ENV "development"
+			 
+			    <Directory "<ECLIPSE_WORKSPACE>\Podcast Downloader\assets\www">
+			        DirectoryIndex index.html
+			        AllowOverride All
+			        Order allow,deny
+			        Allow from all
+			    </Directory>
+			</VirtualHost>
+	  	  
+6.  With Apache installed, you can run the application in the browser (better JavaScript debugging).  
+		- To test adding a Podcast, use URL: http://podcastpal.local/feed.xml
+		
+		
+		
+7.  Install Ruby (RubyInstaller): http://www.ruby-lang.org/en/downloads/ and Compass: http://compass-style.org/
+
+	/styles/podcastpal.scss defines the sass theme adapted from /lib/touch/resources/sass/sencha-touch.scss
+	To compile the /podcastpal.css, run "compass compile" from /styles
+	See http://www.sencha.com/learn/theming-sencha-touch/ for details 
