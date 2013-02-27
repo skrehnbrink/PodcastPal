@@ -4,6 +4,8 @@ bin/
 gen/
 libs/
 res/
+src/
+AndroidManifest.xml
 proguard.cfg
 project.properties
 
