@@ -1,5 +1,5 @@
 
-Podcast Pal is a free and open source mobile web application for podcast management built with Sencha Touch 2.0 and PhoneGap 1.5.
+PodcastPal is a free and open source mobile web application for podcast management built with Sencha Touch 2.0 and PhoneGap 1.5.
 
 Features: 
 	- view podcast feeds
@@ -11,14 +11,23 @@ Notes:
 
 
 
-Podcast Pal Developer Environment Setup (Kindle Fire):
+Podcast Pal Development Environment Setup (for Windows and Kindle Fire):
+=========================================================================
+
+Steps to run PodcastPal on Kindle Fire or AVD:
 
 1.  Install Java JDK, set JAVA_HOME, add JAVA_HOME/lib to PATH
 2.  Install Ant, add ANT_HOME/lib to PATH
 3.  Install Android SDK: http://developer.android.com/sdk/index.html
-4.  Configure Environment for Kindle Fire: https://developer.amazon.com/sdk/fire/connect-adb.html
+4.  Download PhoneGap 1.5: http://phonegap.com/download
+5.  Use Android Getting Started Guide to create a PhoneGap project: http://docs.phonegap.com/en/1.5.0/guide_getting-started_index.md.html#Getting%20Started%20Guides	
+6.  Copy PodcastPal to PhoneGap project
+7.  Configure Environment for Kindle Fire (Set Up Environment Section): https://developer.amazon.com/sdk/fire/connect-adb.html
+8.  Build Project, Run on Kindle Fire or AVD simulator
 
-5.  Install Apache (required for JavaScript debugging)
+Additional Steps to run PodcastPal in the browser:
+
+9.  Install Apache (required for JavaScript debugging)
 		- Add a vhost <APACHE_HOME>/conf/extra/httpd-vhosts.conf (or alternatively an alias in httpd.conf)
 		- Add vhost ServerName to C:\Windows\System32\drivers\etc\hosts
 	  	  Example vhost:
@@ -36,12 +45,13 @@ Podcast Pal Developer Environment Setup (Kindle Fire):
 			    </Directory>
 			</VirtualHost>
 	  	  
-6.  With Apache installed, you can run the application in the browser (better JavaScript debugging).  
+10.  With Apache installed, you can run the application in the browser (better JavaScript debugging).  
 		- To test adding a Podcast, use URL: http://podcastpal.local/feed.xml
 		
 		
-		
-7.  Install Ruby (RubyInstaller): http://www.ruby-lang.org/en/downloads/ and Compass: http://compass-style.org/
+To make changes to the CSS:
+	
+11.  Install Ruby (RubyInstaller): http://www.ruby-lang.org/en/downloads/ and Compass: http://compass-style.org/
 
 	/styles/podcastpal.scss defines the sass theme adapted from /lib/touch/resources/sass/sencha-touch.scss
 	To compile the /podcastpal.css, run "compass compile" from /styles

@@ -1,3 +1,13 @@
+assets/www/lib/
+assets/www/styles/.sass-cache/
+bin/
+gen/
+libs/
+res/
+proguard.cfg
+project.properties
+
+
 #################
 ## Eclipse
 #################
